@@ -33,7 +33,7 @@
               <div class="box">
                   <h2>Featured Mars Image</h2>
                   <hr>
-                  <img class="img-fluid img-thumbnail" src={{ mars.img_url }} alt='featured_img' />
+                  <img src="{{mars.img_url}}" alt='featured_image' />
               </div>
           </div>
           <div class="col-lg-5 col-md-12">
@@ -53,10 +53,10 @@
           <div class="col-lg-3 col-sm-6">
               <div class="box">
                   <div style="padding: 10px 10px 10px 10px" class="row">
-                      <img class="img-fluid img-thumbnail" src={{mars.img_url}} />
+                      <img class="img-fluid img-thumbnail" src="{{ hemisphere.img_url | safe}}" />
                   </div>
                   <div class="row">
-                      <p style="font-size: 16px; font-weight: bold; margin: 5px 20px 20px;">{{mars.img_title}}</p>
+                      <p style="font-size: 16px; font-weight: bold; margin: 5px 20px 20px;">{{img_title}}</p>
                   </div>
               </div>
           </div>
@@ -67,17 +67,3 @@
 </body>
 
 </html>
-
-
-    
-
-      <!-- <p>Beach. Rainforest. Volcano. Tree House. Sloths.</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
-    </div>
-    <img src="{{ mars.featured_image }}" alt="Sloth">
-    <h2>The typical weather in Costa Rica is:</h2>
-    <h3>Max Temp: {{ mars.news_title }}</h3>
-    <h3>Min Temp: {{ mars.news_p }}</h3>
-  </div>
-  </div>
-</body> -->

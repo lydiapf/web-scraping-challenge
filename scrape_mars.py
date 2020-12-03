@@ -50,7 +50,7 @@ def scrape_info():
 
 
     # Retrieve the latest paragraph
-    time.sleep(3)
+    time.sleep(5)
     
     news_p = soup.select_one('div.article_teaser_body').text
     mars["news_title"] = news_title
@@ -114,6 +114,8 @@ def scrape_info():
     img_url = f'https://www.jpl.nasa.gov{img_url_rel}'
     img_url
     mars["featured_image"] = img_url
+    print(img_url)
+
 
 
 
