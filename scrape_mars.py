@@ -30,7 +30,7 @@ def scrape_info():
 
 
 
-    executable_path = {'executable_path': 'chromedriver'}
+    executable_path = {'executable_path': 'Missions_to_Mars/chromedriver'}
     browser = Browser('chrome', **executable_path, headless=False)
     browser.visit('https://mars.nasa.gov/news/')
 
@@ -50,6 +50,8 @@ def scrape_info():
 
 
     # Retrieve the latest paragraph
+    time.sleep(3)
+    
     news_p = soup.select_one('div.article_teaser_body').text
     mars["news_title"] = news_title
     mars["news_p"] = news_p

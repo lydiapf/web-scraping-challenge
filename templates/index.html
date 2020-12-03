@@ -36,6 +36,30 @@
                 <img class="img-fluid img-thumbnail" src={{ mars.img_url }} alt='featured_img' />
             </div>
         </div>
+      </section>
+
+      <section class="container">
+        <h2 style="text-align: center;">Mars Hemispheres</h2>
+        <hr>
+        <div class="row">
+            {% for img in mars.hem %}
+            <div class="col-lg-3 col-sm-6">
+                <div class="box">
+                    <div style="padding: 10px 10px 10px 10px" class="row">
+                        <img class="img-fluid img-thumbnail" src={{mars.hem_url}} />
+                    </div>
+                    <div class="row">
+                        <p style="font-size: 16px; font-weight: bold; margin: 5px 20px 20px;">{{hem.title}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+</body>
+
+</html>
 
 
     
@@ -50,5 +74,3 @@
   </div>
   </div>
 </body> -->
-
-</html>
