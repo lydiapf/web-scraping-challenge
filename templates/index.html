@@ -21,41 +21,48 @@
     </section>
 
     <section class="container">
-      <hr2>Latest Mars News</hr2>
+      <h2>Latest Mars News</h2>
       <hr>
-      <hr4>{{mars.news_title}}</hr4>
+      <h4>{{ mars.news_title }}</h4>
       <article style="font-size: medium;">{{ mars.news_p }}</article>
-   </section>
+  </section>
 
-   <section class="container">
-    <div class="row">
-        <div class="col-lg-7 col-md-12">
-            <div class="box">
-                <h2>Featured Mars Image</h2>
-                <hr>
-                <img class="img-fluid img-thumbnail" src={{ mars.img_url }} alt='featured_img' />
-            </div>
-        </div>
-      </section>
+  <section class="container">
+      <div class="row">
+          <div class="col-lg-7 col-md-12">
+              <div class="box">
+                  <h2>Featured Mars Image</h2>
+                  <hr>
+                  <img class="img-fluid img-thumbnail" src={{ mars.img_url }} alt='featured_img' />
+              </div>
+          </div>
+          <div class="col-lg-5 col-md-12">
+              <div class="box"></div>
+              <h2>Mars Facts</h2>
+              <hr>
+              <p>{{mars.facts | safe}}</p>
+          </div>
+      </div>
+  </section>
 
-      <section class="container">
-        <h2 style="text-align: center;">Mars Hemispheres</h2>
-        <hr>
-        <div class="row">
-            {% for img in mars.hem %}
-            <div class="col-lg-3 col-sm-6">
-                <div class="box">
-                    <div style="padding: 10px 10px 10px 10px" class="row">
-                        <img class="img-fluid img-thumbnail" src={{mars.hem_url}} />
-                    </div>
-                    <div class="row">
-                        <p style="font-size: 16px; font-weight: bold; margin: 5px 20px 20px;">{{hem.title}}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
+  <section class="container">
+      <h2 style="text-align: center;">Mars Hemispheres</h2>
+      <hr>
+      <div class="row">
+          {% for img in mars.hemisphere %}
+          <div class="col-lg-3 col-sm-6">
+              <div class="box">
+                  <div style="padding: 10px 10px 10px 10px" class="row">
+                      <img class="img-fluid img-thumbnail" src={{mars.img_url}} />
+                  </div>
+                  <div class="row">
+                      <p style="font-size: 16px; font-weight: bold; margin: 5px 20px 20px;">{{mars.img_title}}</p>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </section>
 </div>
 </body>
 
